@@ -5,6 +5,8 @@ void main() {
   runApp(
     MaterialApp(
       home: HomeScreen(),
+      theme: ThemeData(fontFamily: 'Roboto'),
+      themeMode: ThemeMode.system,
     ),
   );
 }
