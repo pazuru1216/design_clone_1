@@ -1,4 +1,5 @@
 import 'package:design_clone_1/screen/header.dart';
+import 'package:design_clone_1/screen/recent_doc_title.dart';
 import 'package:design_clone_1/screen/recent_documents.dart';
 import 'package:design_clone_1/screen/stocks.dart';
 import 'package:design_clone_1/screen/sub_header.dart';
@@ -29,9 +30,8 @@ class HomeScreen extends StatelessWidget {
                 Stocks(),
 
                 /// Recent Documents
-                RecentDocuments(
-
-                ),
+                RecentDocTitle(),
+                RecentDocuments(),
               ],
             ),
           ),
