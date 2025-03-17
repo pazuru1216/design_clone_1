@@ -1,8 +1,34 @@
 import 'package:design_clone_1/screen/recent_item.dart';
+import 'package:design_clone_1/model/stock_model.dart';
 import 'package:flutter/material.dart';
 
 class RecentDocuments extends StatelessWidget {
-  const RecentDocuments({super.key});
+  RecentDocuments({super.key});
+
+  Map<String, List<StockModel>> stockitems = {
+    'Maxi': [
+      StockModel(
+        itemName: 'Sidar',
+        sellerName: 'Maxi',
+        sellTime: DateTime.utc(2025, 03, 20),
+      ),
+      StockModel(
+        itemName: 'Pepsiii',
+        sellerName: 'Maxi',
+        sellTime: DateTime.utc(2025, 03, 01),
+      ),
+      StockModel(
+        itemName: 'Orange',
+        sellerName: 'Maxi',
+        sellTime: DateTime.utc(2025, 03, 01),
+      ),
+      StockModel(
+        itemName: 'Ipod',
+        sellerName: 'Maxi',
+        sellTime: DateTime.utc(2025, 03, 01),
+      ),
+    ],
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -35,32 +61,25 @@ class RecentDocuments extends StatelessWidget {
 
           /// Cards
           Container(
-            child:Column(
-              children: [
-                RecentItem(
-                  itemName: 'Coca Cola',
-                  sellerName: 'Brain Stella',
-                  sellTime: DateTime.now(),
+            child: Column(
+                children: stockitems.containsKey('Maxi')
+                ? stockitems['Maxi']! .map(
+                      (e) => RecentItem(
+                        itemName: e.itemName,
+                        sellerName: e.sellerName,
+                        sellTime: e.sellTime,
+                      ),
+                    )
+                    .toList()
+                    :[]
+                // [
+                //   RecentItem(
+                //     itemName: 'Coca Cola',
+                //     sellerName: 'Brain Stella',
+                //     sellTime: DateTime.now(),
+                //   ),
+                // ],
                 ),
-                RecentItem(
-                  itemName: 'GOOSE',
-                  sellerName: 'Lattee',
-                  sellTime: DateTime.now(),
-                ),
-                RecentItem(
-                  itemName: 'Pandaaaa',
-                  sellerName: 'Brain Stella',
-                  sellTime: DateTime.now(),
-                ),
-                RecentItem(
-                  itemName: 'Caramel',
-                  sellerName: 'Brain Stella',
-                  sellTime: DateTime.now(),
-                ),
-
-
-              ],
-            )
           ),
         ],
       ),

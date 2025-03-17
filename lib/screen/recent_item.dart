@@ -5,12 +5,12 @@ class RecentItem extends StatelessWidget {
   final String sellerName;
   final DateTime sellTime;
 
-
-  const RecentItem(
-      {super.key,
-      required this.itemName,
-      required this.sellerName,
-      required this.sellTime});
+  const RecentItem({
+    super.key,
+    required this.itemName,
+    required this.sellerName,
+    required this.sellTime,
+  });
 
   @override
   Widget build(BuildContext context) {

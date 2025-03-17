@@ -5,7 +5,7 @@ class StockIcon extends StatelessWidget {
   final String stockName;
   final iconName;
 
-  const StockIcon({
+const StockIcon({
     required this.numberText,
     required this.stockName,
     required this.iconName,

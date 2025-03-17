@@ -1,1 +1,0 @@
-/// stock data class로 넣을 자리
